@@ -1,27 +1,22 @@
-# KonvaJS基础使用教程
+# vue3-ts-vite-konvajs
 
-KonvaJS是一个 2d JavaScript框架库，主要用于创建交互式图形、动画和复杂的用户界面。它基于Canvas元素，并提供了一个直观的API，可以使用JavaScript和HTML5 Canvas来创建和操作图形元素
+## 简介
 
-**1、konvajs官网：[https://konvajs.org/docs/](https://konvajs.org/docs/)**
+[vue3-ts-vite-konvajs](https://github.com/lpya/vue3-ts-vite-konvajs)是一个konvajs基础使用教程，它包含了矩形、圆、文本、多边形基本图形和常用的事件，还提供了项目实战案例，如果想要其它效果也可以在issues提出来
 
-**2、vue3官网：[https://cn.vuejs.org/guide/introduction.html](https://cn.vuejs.org/guide/introduction.html)**
-
-**3、vite官网：[https://cn.vitejs.dev/guide/#overview](https://cn.vitejs.dev/guide/#overview)**
-
-**4、ElementPlus官网：[https://element-plus.gitee.io/zh-CN/guide/design.html](https://element-plus.gitee.io/zh-CN/guide/design.html)**
-
-
-
-**项目准备**
+## 开发
 
 ```
-# 下载对接模板
-yarn create vite
+#克隆项目
+git clone https://github.com/lpya/vue3-vite-elementplus-admin.git
 
-# 安装ui组件库
-npm install element-plus --save
+#进入项目目录
+cd vue3-ts-vite-konvajs
 
-# 安装konva库
-npm install konva --save
+#安装依赖
+npm install
+
+#启动服务
+npm run dev
+
 ```
-
