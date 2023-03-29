@@ -1,0 +1,155 @@
+@import './iconfont.scss';
+@import './elementui.scss';
+
+$baseBg: #323e52;
+$contentBg: #283142;
+$canvasBg: #202835;
+$baseColor: #c5cfe3;
+
+.advanced {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 20px;
+    background-color: $baseBg;
+    border-bottom: 1px solid #202735;
+
+    .action-left {}
+
+    .action-right {}
+  }
+
+  .container {
+    display: flex;
+
+    .shapes {
+      background-color: $contentBg;
+      width: 240px;
+      height: calc(100vh - 51px);
+      overflow-y: auto;
+
+      .shapes-title {
+        color: $baseColor;
+        background-color: $baseBg;
+        padding: 10px 20px;
+      }
+
+      .shapes-content {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        max-height: 500px;
+        overflow-y: auto;
+
+        .shapes-item {
+          display: flex;
+          flex-flow: column;
+          align-items: center;
+          justify-content: center;
+          box-sizing: border-box;
+          transition: all 0.3s;
+          cursor: pointer;
+          height: 80px;
+          width: 80px;
+          color: $baseColor;
+          border: 2px solid $contentBg;
+          border-radius: 4px;
+
+          &:hover {
+            border: 2px solid #009dff;
+            background-color: $baseBg;
+          }
+
+          i {
+            pointer-events: none;
+            font-size: 30px;
+
+          }
+
+          label {
+            margin-top: 10px;
+            font-size: 14px;
+          }
+
+        }
+      }
+    }
+
+    #canvas {
+      background-color: $canvasBg;
+      height: calc(100vh - 51px);
+      width: calc(100vw - 540px);
+    }
+
+    .attrs {
+      background-color: $contentBg;
+      width: 300px;
+
+      .attrs-content {
+        .attrs-title {
+          color: $baseColor;
+          background-color: $baseBg;
+          padding: 10px 20px;
+        }
+
+        .attrs-item {
+          display: flex;
+          align-items: center;
+          padding: 10px 15px;
+
+          .label {
+            color: $baseColor;
+            width: 80px;
+            font-size: 14px;
+          }
+
+          .input {
+            display: flex;
+            align-items: center;
+
+            .color {
+              color: $baseColor;
+              margin-left: 15px;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .contextMenu {
+    position: fixed;
+    background-color: $baseBg;
+    min-width: 100px;
+    font-size: 14px;
+    color: $baseColor;
+    z-index: 1000;
+
+    .contextmenu-item {
+      cursor: pointer;
+      line-height: 34px;
+      text-align: center;
+
+      &.default {
+        &:hover {
+          background-color: $contentBg;
+          color: $baseColor;
+        }
+      }
+
+      &.disabled {
+        cursor: not-allowed;
+        color: $baseColor;
+      }
+
+      &.disabled {}
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
