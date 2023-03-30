@@ -92,8 +92,9 @@ export const constantRoutes: Array<RouteRecordRaw> = [
     component: () => import('@/views/advanced/index.vue'),
   },
 ]
+
 const router = createRouter({
-  history: createWebHashHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes: constantRoutes
 })
 

@@ -2,9 +2,10 @@
   <div class="advanced">
     <div class="header">
       <div class="action-left">
-        <el-button type="warning">返回</el-button>
+        <el-button type="warning" @click="back">返回</el-button>
       </div>
       <div class="action-right">
+        <el-button type="success" @click="jumpGithub">项目地址</el-button>
         <el-button type="primary" @click="downLoadFile">导出png</el-button>
         <el-button type="danger" @click="clearShapes">清空</el-button>
       </div>
@@ -99,9 +100,11 @@
 <script lang="ts" setup>
 import { KonvaJS } from "./utils/konva";
 import { reactive, toRefs, onMounted } from "vue";
+
 import { IComponentShapeType } from "./@types";
 import Konva from "konva";
 import { componentShapeType, componentShapeList } from "./utils/consts";
+import { useRouter } from "vue-router";
 const state = reactive({
   konva: new KonvaJS("canvas"),
   type: "" as IComponentShapeType,
@@ -113,7 +116,7 @@ const state = reactive({
   ],
   contextMenuVis: false
 })
-
+const router = useRouter()
 onMounted(() => {
   init()
   document.oncontextmenu = function () {
@@ -321,7 +324,12 @@ const clearShapes = () => {
     }
   }
 }
-
+const back = () => {
+  router.push("/")
+}
+const jumpGithub = () => {
+  window.location.href = "https://github.com/lpya/vue3-ts-vite-konvajs"
+}
 const { shapeAttrs, menuList, contextMenuVis } = toRefs(state)
 </script>
 
