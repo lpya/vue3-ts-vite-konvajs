@@ -29,10 +29,12 @@ const init = () => {
   stage.add(layer)
   // 线、曲线、闭合
   const line = new Konva.Line({
-    points: [100, 100, 200, 300, 500, 400],//[x1,y1,x2,y2...]
+    x: 400,
+    points: [100, 100, 200, 300, 500, 400, 800, 500],//[x1,y1,x2,y2...]
     stroke: "red",
     strokeWidth: 2,
-    closed: true,
+    // closed: true,
+    draggable: true,
     fill: "red",
     tension: 0.5// 值越大，拉伸越大
   })
