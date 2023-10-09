@@ -28,7 +28,7 @@ const init = () => {
   const layer = new Konva.Layer()
   stage.add(layer)
 
-  Konva.Image.fromURL("address.png", (image: Konva.Image) => {
+  Konva.Image.fromURL("/images/address.png", (image: Konva.Image) => {
     image.setAttrs({
       x: clientWidth / 2 - 25,
       y: clientHeight / 2 - 25,
