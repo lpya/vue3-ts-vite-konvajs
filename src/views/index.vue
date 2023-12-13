@@ -10,10 +10,11 @@
     </div>
     <div class="content">
       <el-row class="list" :gutter="20">
-        <el-col v-for="(item, key) in linkList" :key="key" :span="6">
+        <el-col v-for="(item, key) in linkList" :key="key" :span="6" class="list-item">
           <router-link :to="item.path" class="card">
-            <div class="cover"
-              :style="{ background: `url(${getAssetsFile(item.coverUrl)})`, backgroundSize: '100% 100%' }"></div>
+            <!-- githubpage不支持动态导入路径 -->
+            <!-- <div class="cover" :style="{ background: `url(${getAssetsFile(item.coverUrl)})`, backgroundSize: '100% 100%' }"></div> -->
+            <div class="cover"></div>
             <div class="title">{{ item.title }}</div>
           </router-link>
         </el-col>
@@ -211,5 +212,14 @@ const getAssetsFile = (url: string) => {
 
   }
 
+}
+
+@for $i from 1 through 21 {
+  .list-item:nth-child(#{$i}) {
+    .cover {
+      background: url("@/assets/images/#{$i - 1}.png");
+      background-size: 100% 100%;
+    }
+  }
 }
 </style>

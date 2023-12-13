@@ -6,7 +6,6 @@
 
 <script lang='ts' setup>
 import Konva from 'konva';
-import { shapes } from 'konva/lib/Shape';
 import { onMounted } from 'vue';
 
 let stage: Konva.Stage | null = null
