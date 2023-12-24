@@ -138,7 +138,7 @@ const state = reactive({
     {
       title: '图形悬浮高亮【mouseenter】',
       path: '/21-hoverEvents',
-      coverUrl: '../assets/images/20.png',
+      coverUrl: '../assets/images/21.png',
     },
   ]
 })
@@ -219,7 +219,7 @@ const getAssetsFile = (url: string) => {
 
 }
 
-@for $i from 1 through 21 {
+@for $i from 1 through 22 {
   .list-item:nth-child(#{$i}) {
     .cover {
       background: url("@/assets/images/#{$i - 1}.png");
