@@ -81,10 +81,15 @@ export const constantRoutes: Array<RouteRecordRaw> = [
     path: '/19-wheel',
     name: '19-wheel',
     component: () => import('@/views/19-wheel.vue'),
-  }, {
+  },
+  {
     path: '/20-preview',
     name: '20-preview',
     component: () => import('@/views/20-preview.vue'),
+  }, {
+    path: '/21-hoverEvents',
+    name: '21-hoverEvents',
+    component: () => import('@/views/21-hoverEvents.vue'),
   },
   {
     path: '/advanced',

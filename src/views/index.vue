@@ -135,6 +135,11 @@ const state = reactive({
       path: '/20-preview',
       coverUrl: '../assets/images/20.png',
     },
+    {
+      title: '图形悬浮高亮【mouseenter】',
+      path: '/21-hoverEvents',
+      coverUrl: '../assets/images/20.png',
+    },
   ]
 })
 const { linkList } = toRefs(state)
