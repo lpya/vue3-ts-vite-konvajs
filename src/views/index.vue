@@ -140,6 +140,11 @@ const state = reactive({
       path: '/21-hoverEvents',
       coverUrl: '../assets/images/21.png',
     },
+    {
+      title: '鼠标点击设置多边形【line】',
+      path: '/22-closedLine',
+      coverUrl: '../assets/images/21.png',
+    },
   ]
 })
 const { linkList } = toRefs(state)
@@ -219,7 +224,7 @@ const getAssetsFile = (url: string) => {
 
 }
 
-@for $i from 1 through 22 {
+@for $i from 1 through 23 {
   .list-item:nth-child(#{$i}) {
     .cover {
       background: url("@/assets/images/#{$i - 1}.png");

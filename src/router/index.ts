@@ -86,10 +86,16 @@ export const constantRoutes: Array<RouteRecordRaw> = [
     path: '/20-preview',
     name: '20-preview',
     component: () => import('@/views/20-preview.vue'),
-  }, {
+  },
+  {
     path: '/21-hoverEvents',
     name: '21-hoverEvents',
     component: () => import('@/views/21-hoverEvents.vue'),
+  },
+  {
+    path: '/22-closedLine',
+    name: '22-closedLine',
+    component: () => import('@/views/22-closedLine.vue'),
   },
   {
     path: '/advanced',
