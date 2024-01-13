@@ -1,6 +1,10 @@
 <template>
   <div class='index'>
-    <div class="header">按住【ctrl】键的同时，单击鼠标【左键】选点生成线，双击【左键】【线】生成多边形</div>
+    <div class="header">
+      <span>按住</span>
+      <span :style="{ color: `${isCtrl ? 'red' : '#000'}`, fontWeight: 'bold' }">【ctrl】</span>
+      <span> 键的同时，单击鼠标【左键】选点生成线，【左键】双击【线】生成多边形</span>
+    </div>
     <div id="canvas"></div>
   </div>
 </template>
@@ -8,7 +12,7 @@
 <script lang='ts' setup>
 import Konva from 'konva';
 import { onMounted, ref } from 'vue';
-
+import { getUUID } from '@/utils/uuid'
 onMounted(() => {
   init()
   keyDown()
@@ -111,13 +115,6 @@ const keyDown = () => {
   }
 }
 
-const getUUID = () => {
-  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
-    var r = Math.random() * 16 | 0,
-      v = c === 'x' ? r : r & 0x3 | 0x8;
-    return v.toString(16);
-  });
-}
 </script>
 
 <style lang='scss' scoped>
