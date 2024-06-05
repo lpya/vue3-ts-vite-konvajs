@@ -144,13 +144,18 @@ const state = reactive({
       title: '鼠标点击设置多边形【line】',
       path: '/22-closedLine',
       coverUrl: '../assets/images/21.png',
+    },  
+    {
+      title: '文本编辑【text】',
+      path: '/23-editorText',
+      coverUrl: '../assets/images/21.png',
     },
   ]
 })
 const { linkList } = toRefs(state)
 
 const jumpHome = () => {
-  window.location.href = 'https://www.lpya.cn'
+  window.location.href = 'https://www.xpacai.com'
 }
 
 const jumpGithub = () => {
@@ -224,7 +229,7 @@ const getAssetsFile = (url: string) => {
 
 }
 
-@for $i from 1 through 23 {
+@for $i from 1 through 24 {
   .list-item:nth-child(#{$i}) {
     .cover {
       background: url("@/assets/images/#{$i - 1}.png");

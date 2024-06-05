@@ -98,6 +98,11 @@ export const constantRoutes: Array<RouteRecordRaw> = [
     component: () => import('@/views/22-closedLine.vue'),
   },
   {
+    path: '/23-editorText',
+    name: '23-editorText',
+    component: () => import('@/views/23-editorText.vue'),
+  },
+  {
     path: '/advanced',
     name: 'advanced',
     component: () => import('@/views/advanced/index.vue'),
