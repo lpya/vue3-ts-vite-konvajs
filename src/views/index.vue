@@ -148,7 +148,12 @@ const state = reactive({
     {
       title: '文本编辑【text】',
       path: '/23-editorText',
-      coverUrl: '../assets/images/21.png',
+      coverUrl: '../assets/images/22.png',
+    },
+    {
+      title: '关系连线',
+      path: '/24-relation',
+      coverUrl: '../assets/images/24.png',
     },
   ]
 })
@@ -229,7 +234,7 @@ const getAssetsFile = (url: string) => {
 
 }
 
-@for $i from 1 through 24 {
+@for $i from 1 through 25 {
   .list-item:nth-child(#{$i}) {
     .cover {
       background: url("@/assets/images/#{$i - 1}.png");

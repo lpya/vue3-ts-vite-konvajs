@@ -101,6 +101,11 @@ export const constantRoutes: Array<RouteRecordRaw> = [
     path: '/23-editorText',
     name: '23-editorText',
     component: () => import('@/views/23-editorText.vue'),
+  }, 
+  {
+    path: '/24-relation',
+    name: '24-relation',
+    component: () => import('@/views/24-relation.vue'),
   },
   {
     path: '/advanced',
